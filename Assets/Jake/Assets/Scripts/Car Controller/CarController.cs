@@ -48,6 +48,10 @@ public class CarController : MonoBehaviour
     bool handBrake = false;
     Rigidbody carRigidBody;
 
+    [Header("Lap")]
+    public int maxLaps;
+    public int currentLap;
+
     private void Start()
     {
         carRigidBody = GetComponent<Rigidbody>();
@@ -56,6 +60,8 @@ public class CarController : MonoBehaviour
         {
             carRigidBody.centerOfMass = COM.localPosition;
         }
+
+        maxLaps = FindObjectOfType<LapSystem>().maxLaps;
     }
 
     private void Update()
@@ -176,5 +182,11 @@ public class CarController : MonoBehaviour
         BackRightWheelCollider.GetWorldPose(out position, out rotation);
         BackRightWheel.transform.position = position;
         BackRightWheel.transform.rotation = rotation;
+    }
+
+    public void IncreaseLap()
+    {
+        currentLap++;
+        Debug.Log(gameObject.name + " has completed lap " + currentLap + " out of " + maxLaps);
     }
 }

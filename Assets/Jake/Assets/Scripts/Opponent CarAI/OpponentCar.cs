@@ -19,10 +19,15 @@ public class OpponentCar : MonoBehaviour
     public float respawnTimer = 0f;
     public const float respawnTimeThreshold = 10f;
 
+    [Header("Lap")]
+    public int maxLaps;
+    public int currentLap;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = true;
+        maxLaps = FindObjectOfType<LapSystem>().maxLaps;
     }
 
     void Update()
@@ -90,6 +95,12 @@ public class OpponentCar : MonoBehaviour
     {
         currentSpeed = Random.Range(20f, 30f);
         acceleration = Random.Range(3.5f, 5f);
+    }
+
+    public void IncreaseLap()
+    {
+        currentLap++;
+        Debug.Log("Car " + gameObject.name + " has completed lap " + currentLap + " out of " + maxLaps);
     }
 
 }

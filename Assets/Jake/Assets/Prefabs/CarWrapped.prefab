@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 6808285446787280863}
   - component: {fileID: 3633831558385589416}
   m_Layer: 0
-  m_Name: Car5
+  m_Name: CarWrapped
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,6 +162,8 @@ MonoBehaviour:
   maximumSpeed: 140
   brakePower: 5000
   COM: {fileID: 2882173543455976772}
+  maxLaps: 0
+  currentLap: 0
 --- !u!1 &948009461175872281
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +484,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8748892135801146194, guid: 9fdb5209ffb8abb498073ea70f649e20, type: 3}
+  - {fileID: -8754183377896580593, guid: 36c373404a6674148b156e3398f0320f, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
