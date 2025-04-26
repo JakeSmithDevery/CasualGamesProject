@@ -15,6 +15,10 @@ public class OpponentCar : MonoBehaviour
 
     private Rigidbody rb;
 
+    [Header("Respawn")]
+    public float respawnTimer = 0f;
+    public const float respawnTimeThreshold = 10f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -24,6 +28,20 @@ public class OpponentCar : MonoBehaviour
     void Update()
     {
         Drive();
+
+        if(!destinationReached)
+        {
+            respawnTimer += Time.deltaTime;
+
+            if(respawnTimer >= respawnTimeThreshold)
+            {
+                RespawnAtDestination();
+            }
+        }
+        else
+        {
+            respawnTimer = 0f;
+        }
     }
 
     public void Drive()
@@ -51,10 +69,27 @@ public class OpponentCar : MonoBehaviour
         }
     }
 
+    private void RespawnAtDestination()
+    {
+        respawnTimer = 0f;
+        currentSpeed = 5f;
+
+        transform.position = destination;
+
+        transform.rotation = Quaternion.identity;
+        destinationReached = false;
+    }
+
     public void LocateDestination(Vector3 newDestination)
     {
         destination = newDestination;
         destinationReached = false;
+    }
+
+    public void ResetAcceleration()
+    {
+        currentSpeed = Random.Range(20f, 30f);
+        acceleration = Random.Range(3.5f, 5f);
     }
 
 }
