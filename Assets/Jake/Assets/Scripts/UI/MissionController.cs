@@ -55,11 +55,11 @@ public class MissionController : MonoBehaviour
         missionCompleted = true;
         if (success)
         {
-            resultText.text = "Mission Completed!";
+            resultText.text = "Completed!";
         }
         else
         {
-            resultText.text = "Mission Failed!";
+            resultText.text = "Failed!";
         }
 
         Invoke("LoadMainMenuScene", 3f); // Load the main menu scene after 3 seconds

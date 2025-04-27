@@ -73,6 +73,16 @@ public class CarController : MonoBehaviour
         ApplyTransformToWheels();
     }
 
+    public void MoveInput(float moveInput)
+    {
+        vertical = moveInput;
+    }
+
+    public void SteeringInput(float moveInput)
+    {
+        horizontal = moveInput;
+    }
+
     void GetInput()
     {
         if (control == ControlMode.Keyboard)
