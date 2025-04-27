@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
+    private bool isGamePaused = false;
+    public GameObject pauseMenuUI;
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);
@@ -45,6 +46,34 @@ public class MainMenu : MonoBehaviour
         // Implement the logic to remove ads here
         Debug.Log("Ads removed.");
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f; // Pause the game
+        isGamePaused = true;
+        pauseMenuUI.SetActive(true); // Show the pause menu
+
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f; // Resume the game
+        isGamePaused = false;
+        pauseMenuUI.SetActive(false); // Hide the pause menu
+    }
+
+    public void TogglePause()
+    {
+        if (isGamePaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
+    }
+
     public void QuitGame()
     {
         Application.Quit();
