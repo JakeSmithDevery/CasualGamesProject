@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Jake/Scenes/MainMenu.unity
     guid: 3836ce6eef6f93c49aae31939be21ad8
   - enabled: 1
+    path: Assets/Jake/Scenes/ModeSelect.unity
+    guid: 9434e91167111214e851df3b397415f7
+  - enabled: 1
     path: Assets/Jake/Scenes/Test Track.unity
     guid: f226cb56a35a6a7448b01811f909cf10
+  - enabled: 1
+    path: Assets/Jake/Scenes/Practice.unity
+    guid: 625ff48636b093a4ba038cd4f9edb27c
+  - enabled: 1
+    path: Assets/Jake/Scenes/TimeTrial.unity
+    guid: 499a2598c63665040bcf429aa7d5bbda
+  - enabled: 1
+    path: Assets/Urban American Assets/Demo scenes/Paint booth.unity
+    guid: be3984f7b0d57c94789a2f52a29f9a6d
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 19a6e9b083bd2f442b7449958aab3374, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

@@ -329,13 +329,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6510defa57a2142b51951134f88f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 35
+  maxSpeed: 10
   currentSpeed: 0
   acceleration: 3.5
-  turningSpeed: 70
+  turningSpeed: 30
   breakSpeed: 12
   destination: {x: 0, y: 0, z: 0}
   destinationReached: 0
+  respawnTimer: 0
+  maxLaps: 0
+  currentLap: 0
 --- !u!95 &4116536052000210381
 Animator:
   serializedVersion: 7

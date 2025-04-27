@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 1994250884664628508}
   - component: {fileID: 6808285446787280863}
   - component: {fileID: 3633831558385589416}
+  - component: {fileID: 507466021729184629}
   m_Layer: 0
   m_Name: DefaultCar
   m_TagString: Untagged
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b9054b1c474b44a99689251371e72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carType: 2
+  carType: 1
   control: 0
   FrontLeftWheel: {fileID: 6347214948206402162}
   FrontRightWheel: {fileID: 5211377486975963302}
@@ -159,9 +160,32 @@ MonoBehaviour:
   BackRightWheelCollider: {fileID: 3948109594202957324}
   maxMotorTorque: 900
   maxSteeringAngle: 20
-  maximumSpeed: 140
+  maximumSpeed: 100
   brakePower: 5000
   COM: {fileID: 2882173543455976772}
+  maxLaps: 0
+  currentLap: 0
+--- !u!65 &507466021729184629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119729175533970446}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &948009461175872281
 GameObject:
   m_ObjectHideFlags: 0

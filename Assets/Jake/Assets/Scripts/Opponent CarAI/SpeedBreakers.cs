@@ -12,7 +12,7 @@ public class SpeedBreakers : MonoBehaviour
         {
             opponentCar.acceleration = Random.Range(0.5f, 1f);
 
-            opponentCar.currentSpeed = Random.Range(20f, 30f);
+            opponentCar.currentSpeed = Random.Range(5f, 15f);
 
             StartCoroutine(ResetAcceleration(opponentCar));
         }

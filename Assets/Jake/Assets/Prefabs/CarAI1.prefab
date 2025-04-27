@@ -2449,7 +2449,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 7.23, y: 0.32663, z: 51.56}
-  m_LocalScale: {x: 0.72423, y: 0.72423, z: 0.72423}
+  m_LocalScale: {x: 0.72422993, y: 0.72423, z: 0.72422993}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6723204025299551411}
@@ -2498,13 +2498,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6510defa57a2142b51951134f88f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 30
+  maxSpeed: 15
   currentSpeed: 0
   acceleration: 2.5
-  turningSpeed: 100
+  turningSpeed: 30
   breakSpeed: 12
   destination: {x: 0, y: 0, z: 0}
   destinationReached: 0
+  respawnTimer: 0
+  maxLaps: 0
+  currentLap: 0
 --- !u!114 &8623818770589678054
 MonoBehaviour:
   m_ObjectHideFlags: 0
