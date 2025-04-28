@@ -24,7 +24,7 @@ public class StartCountdown : MonoBehaviour
     private void Update()
     {
         if (HaveWeCountedYet == true) return;
-        if (SceneManager.GetActiveScene().ToString() == "NetGame")
+        if (SceneManager.GetActiveScene().name == "NetGame")
         {
             if (playerCars.Length == 2)
             {

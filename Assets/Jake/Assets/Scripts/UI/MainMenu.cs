@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public void PlayGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadSceneAsync(1);
     }
 

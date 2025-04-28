@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 
 public class NetCarController : NetworkBehaviour
 {
@@ -57,6 +58,7 @@ public class NetCarController : NetworkBehaviour
     [SerializeField] Camera cam;
     [SerializeField] AudioListener audioListener;
 
+    private NetworkTransform netTrans;
     private void Awake()
     {
         carRigidBody = GetComponent<Rigidbody>();
@@ -64,6 +66,8 @@ public class NetCarController : NetworkBehaviour
         {
             carRigidBody.centerOfMass = COM.localPosition;
         }
+        netTrans = GetComponent<NetworkTransform>();
+
     }
     public override void OnNetworkSpawn()
     {
@@ -81,21 +85,23 @@ public class NetCarController : NetworkBehaviour
 
     private void FixedUpdate()
     {
-        if (!IsOwner) { return; }
+        if (!IsOwner) return;
+
         GetInput();
         CalculateCarMovement();
         CalculateSteering();
-
         ApplyTransformToWheels();
     }
 
     public void MoveInput(float moveInput)
     {
+        if (!IsOwner) { return; }
         vertical = moveInput;
     }
 
     public void SteeringInput(float moveInput)
     {
+        if (!IsOwner) { return; }
         horizontal = moveInput;
     }
 
@@ -212,7 +218,9 @@ public class NetCarController : NetworkBehaviour
 
     public void IncreaseLap()
     {
+        if (!IsOwner) { return; }
         currentLap++;
         Debug.Log(gameObject.name + " has completed lap " + currentLap + " out of " + maxLaps);
     }
+
 }
