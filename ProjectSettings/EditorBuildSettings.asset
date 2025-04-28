@@ -6,9 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Jake/Scenes/MainMenu.unity
+    guid: 3836ce6eef6f93c49aae31939be21ad8
+  - enabled: 1
+    path: Assets/Jake/Scenes/ModeSelect.unity
+    guid: 9434e91167111214e851df3b397415f7
+  - enabled: 1
+    path: Assets/Jake/Scenes/Test Track.unity
+    guid: f226cb56a35a6a7448b01811f909cf10
+  - enabled: 1
+    path: Assets/Jake/Scenes/Practice.unity
+    guid: 6de70e990c93bc243802089ed19668ce
+  - enabled: 1
+    path: Assets/Jake/Scenes/TimeTrial.unity
+    guid: cf93000e5d2437d4daefc1d3193cb717
+  - enabled: 1
+    path: Assets/Urban American Assets/Demo scenes/Paint booth.unity
+    guid: be3984f7b0d57c94789a2f52a29f9a6d
+  - enabled: 1
+    path: Assets/Robert2/NetGame.unity
+    guid: b9d843b045531a349ae1bbbb0bf5d7cf
   m_configObjects:
-    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9227e98e4b6e046c5b175924d7b5d070, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 19a6e9b083bd2f442b7449958aab3374, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
