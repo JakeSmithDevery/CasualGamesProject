@@ -27,8 +27,8 @@ public class MainMenu : MonoBehaviour
 
     public void Online()
     {
-        //SceneManager.LoadSceneAsync(6);
-        Debug.Log("Online mode is not implemented yet.");
+        SceneManager.LoadSceneAsync(6);
+        //Debug.Log("Online mode is not implemented yet.");
     }
 
     public void Back()

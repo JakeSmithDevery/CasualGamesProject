@@ -94,7 +94,7 @@ PlayerSettings:
   bakeCollisionMeshes: 0
   forceSingleInstance: 0
   useFlipModelSwapchain: 1
-  resizableWindow: 0
+  resizableWindow: 1
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
   gpuSkinning: 1
@@ -106,7 +106,7 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   allowFullscreenSwitch: 1
-  fullscreenMode: 1
+  fullscreenMode: 3
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -902,6 +902,7 @@ PlayerSettings:
   cloudServicesEnabled:
     Purchasing: 1
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -923,11 +924,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: eceeaae2-906c-4b02-a344-7a988531e41e
+  cloudProjectId: fbaccd42-cb03-427a-b1f1-c56f5f5937a0
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: CasualGames
-  organizationId: tohru_1357
+  organizationId: tigerrace
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

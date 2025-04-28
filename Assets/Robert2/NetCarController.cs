@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Unity.Netcode;
 
-public class CarController : MonoBehaviour
+public class NetCarController : NetworkBehaviour
 {
     public enum CarType
     {
@@ -53,20 +53,35 @@ public class CarController : MonoBehaviour
     public int maxLaps;
     public int currentLap;
 
-    private void Start()
+    [Header("Camera")]
+    [SerializeField] Camera cam;
+    [SerializeField] AudioListener audioListener;
+
+    private void Awake()
     {
         carRigidBody = GetComponent<Rigidbody>();
-
         if (carRigidBody != null)
         {
             carRigidBody.centerOfMass = COM.localPosition;
         }
+    }
+    public override void OnNetworkSpawn()
+    {
+        if (!IsOwner)
+        {
+            audioListener.enabled = false;
+            cam.enabled = false;
+            return;
+        }
 
+        audioListener.enabled = true;
+        cam.enabled = true;
         maxLaps = FindObjectOfType<LapSystem>().maxLaps;
     }
 
     private void FixedUpdate()
     {
+        if (!IsOwner) { return; }
         GetInput();
         CalculateCarMovement();
         CalculateSteering();
@@ -96,7 +111,7 @@ public class CarController : MonoBehaviour
     void CalculateCarMovement()
     {
         carSpeed = carRigidBody.linearVelocity.magnitude;
-        carSpeedConverted= Mathf.Round(carSpeed * 3.6f);
+        carSpeedConverted = Mathf.Round(carSpeed * 3.6f);
 
         //Braking
         if (Input.GetKey(KeyCode.Space))
